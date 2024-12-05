@@ -279,8 +279,6 @@ Este projeto implementa uma **tabela dinâmica e interativa** utilizando o **Dat
   </table>
   ```
 
-Esses exemplos de código mostram como ativar e configurar recursos básicos do **DataTables** em uma tabela.
-
 ### CONCLUSÃO:
 Esses são apenas alguns dos muitos recursos oferecidos pelo **DataTables**. A biblioteca é altamente configurável, permitindo que você adicione ou remova recursos conforme necessário, criando tabelas ricas e interativas para o seu projeto.
 
