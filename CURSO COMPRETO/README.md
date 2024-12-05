@@ -48,70 +48,124 @@ Este projeto implementa uma **tabela dinâmica e interativa** utilizando o **Dat
 
 ---
 
-## QUAIS RECURSOS ESTÃO DISPONIVEIS?
-O **DataTables** oferece uma ampla gama de recursos que permitem criar tabelas interativas e dinâmicas. Aqui estão alguns dos principais recursos disponíveis:
-
-1. **Paginação**
-- **Descrição:** Permite dividir grandes conjuntos de dados em várias páginas, melhorando a usabilidade e a performance.
-- **Exemplo:** `paging: true` (Ativado por padrão).
-
-2. **Busca/Filtragem**
-- **Descrição:** Uma barra de pesquisa que permite aos usuários procurar por conteúdo específico na tabela.
-- **Exemplo:** `searching: true` (Ativado por padrão).
-
-3. **Ordenação (Sorting)**
-- **Descrição:** Permite ordenar as colunas da tabela em ordem crescente ou decrescente ao clicar no cabeçalho.
-- **Exemplo:** `ordering: true` (Ativado por padrão).
-
-4. **Exibição de Número de Registros por Página**
-- **Descrição:** Exibe o número de registros por página e oferece opções para o usuário escolher quantos registros deseja ver.
-- **Exemplo:** `pageLength: 10` para mostrar 10 registros por página.
-
-5. **Botões de Exportação (Buttons)**
-- **Descrição:** Permite exportar os dados da tabela em diferentes formatos, como Excel, CSV, PDF, etc.
-- **Exemplo:** `buttons: ["copyHtml5", "csvHtml5", "excelHtml5", "pdfHtml5"]`.
-
-6. **Tabela Responsiva**
-- **Descrição:** Ajusta a tabela automaticamente para diferentes tamanhos de tela (desktop, tablet, mobile).
-- **Exemplo:** `responsive: true`.
-
-7. **Controle de Colunas Visíveis (Column Visibility)**
-- **Descrição:** Permite ao usuário controlar a visibilidade das colunas da tabela.
-- **Exemplo:** `columnDefs: [{ targets: [0], visible: false }]` (esconde a primeira coluna).
-
-8. **Carregamento de Dados via Ajax**
-- **Descrição:** Permite carregar dados de uma fonte externa, como uma API, em vez de carregar os dados diretamente no HTML.
-- **Exemplo:** 
+## QUAIS RECURSOS ESTÃO DISPONÍVEIS?
+### 1. PAGINAÇÃO:
+- **Descrição**: Permite dividir grandes conjuntos de dados em várias páginas, melhorando a usabilidade e a performance.
+- **Exemplo**:
   ```javascript
   $("#tabela").DataTable({
-    ajax: 'data.json'
+    paging: true // Ativado por padrão
   });
   ```
 
-9. **Reordenação de Linhas (Row Reordering)**
-- **Descrição:** Permite que os usuários reordem as linhas da tabela arrastando-as.
-- **Exemplo:** `rowReorder: true`.
-
-10. **Animações e Efeitos**
-- **Descrição:** Adiciona animações e efeitos ao carregar e interagir com a tabela.
-- **Exemplo:** `processing: true` (mostra um indicador de carregamento).
-
-11. **Seleção de Linhas**
-- **Descrição:** Permite que os usuários selecionem uma ou mais linhas da tabela.
-- **Exemplo:** 
+### 2. BUSCA/FILTRAGEM:
+- **Descrição**: Barra de pesquisa que permite aos usuários procurar por conteúdo específico na tabela.
+- **Exemplo**:
   ```javascript
   $("#tabela").DataTable({
-    select: true
+    searching: true // Ativado por padrão
   });
   ```
 
-12. **Configuração de Estilo com CSS**
-- **Descrição:** Customização do estilo visual da tabela, como cores, fontes e tamanhos.
-- **Exemplo:** Usando `className` e outras opções de personalização do estilo.
+### 3. ORDENAÇÃO (SORTING):
+- **Descrição**: Permite ordenar as colunas da tabela em ordem crescente ou decrescente ao clicar no cabeçalho.
+- **Exemplo**:
+  ```javascript
+  $("#tabela").DataTable({
+    ordering: true // Ativado por padrão
+  });
+  ```
 
-13. **Agrupamento de Dados (Row Grouping)**
-- **Descrição:** Agrupa dados da tabela de acordo com um valor específico.
-- **Exemplo:** 
+### 4. EXIBIÇÃO DE NÚMERO DE REGISTROS POR PÁGINA:
+- **Descrição**: Exibe o número de registros por página e oferece opções para o usuário escolher quantos registros deseja ver.
+- **Exemplo**:
+  ```javascript
+  $("#tabela").DataTable({
+    pageLength: 10 // Exibe 10 registros por página
+  });
+  ```
+
+### 5. BOTÕES DE EXPORTAÇÃO (BUTTONS):
+- **Descrição**: Permite exportar os dados da tabela em diferentes formatos, como Excel, CSV, PDF, etc.
+- **Exemplo**:
+  ```javascript
+  $("#tabela").DataTable({
+    buttons: ["copyHtml5", "csvHtml5", "excelHtml5", "pdfHtml5"]
+  });
+  ```
+
+### 6. TABELA RESPONSIVA:
+- **Descrição**: Ajusta a tabela automaticamente para diferentes tamanhos de tela (desktop, tablet, mobile).
+- **Exemplo**:
+  ```javascript
+  $("#tabela").DataTable({
+    responsive: true
+  });
+  ```
+
+### 7. CONTROLE DE COLUNAS VISÍVEIS (COLUMN VISIBILITY):
+- **Descrição**: Permite ao usuário controlar a visibilidade das colunas da tabela.
+- **Exemplo**:
+  ```javascript
+  $("#tabela").DataTable({
+    columnDefs: [{
+      targets: [0], // Coluna 0 ficará invisível
+      visible: false
+    }]
+  });
+  ```
+
+### 8. CARREGAMENTO DE DADOS VIA AJAX:
+- **Descrição**: Permite carregar dados de uma fonte externa, como uma API, em vez de carregar os dados diretamente no HTML.
+- **Exemplo**:
+  ```javascript
+  $("#tabela").DataTable({
+    ajax: 'data.json' // Carrega dados de um arquivo JSON
+  });
+  ```
+
+### 9. REORDENAÇÃO DE LINHAS (ROW REORDERING):
+- **Descrição**: Permite que os usuários reordem as linhas da tabela arrastando-as.
+- **Exemplo**:
+  ```javascript
+  $("#tabela").DataTable({
+    rowReorder: true // Permite reordenar as linhas
+  });
+  ```
+
+### 10. ANIMAÇÕES E EFEITOS:
+- **Descrição**: Adiciona animações e efeitos ao carregar e interagir com a tabela.
+- **Exemplo**:
+  ```javascript
+  $("#tabela").DataTable({
+    processing: true // Mostra indicador de carregamento
+  });
+  ```
+
+### 11. SELEÇÃO DE LINHAS:
+- **Descrição**: Permite que os usuários selecionem uma ou mais linhas da tabela.
+- **Exemplo**:
+  ```javascript
+  $("#tabela").DataTable({
+    select: true // Permite selecionar linhas
+  });
+  ```
+
+### 12. CONFIGURAÇÃO DE ESTILO COM CSS:
+- **Descrição**: Customização do estilo visual da tabela, como cores, fontes e tamanhos.
+- **Exemplo**:
+  ```javascript
+  $("#tabela").DataTable({
+    columnDefs: [{
+      targets: [0], // Customiza o estilo da coluna 0
+      className: 'dt-head-center' // Aplica uma classe CSS personalizada
+    }]
+  });
+  ```
+
+### 13. AGRUPAMENTO DE DADOS (ROW GROUPING):
+- **Descrição**: Agrupa dados da tabela de acordo com um valor específico.
+- **Exemplo**:
   ```javascript
   $("#tabela").DataTable({
     rowGroup: {
@@ -120,12 +174,20 @@ O **DataTables** oferece uma ampla gama de recursos que permitem criar tabelas i
   });
   ```
 
-14. **Exibição de Tabela de Dados com Gráficos**
-- **Descrição:** Integrar gráficos com os dados da tabela, usando bibliotecas como Chart.js ou outros.
-  
-15. **Busca em Colunas Específicas (Column Filtering)**
-- **Descrição:** Permite aplicar filtros em colunas específicas, criando menus de filtro.
-- **Exemplo:** 
+### 14. EXIBIÇÃO DE TABELA DE DADOS COM GRÁFICOS:
+- **Descrição**: Integra gráficos com os dados da tabela, usando bibliotecas como Chart.js ou outros.
+- **Exemplo**:
+  - Aqui, a integração depende da biblioteca gráfica usada, mas você pode combinar os dados da tabela com gráficos em um painel. Exemplo simplificado:
+  ```javascript
+  var table = $("#tabela").DataTable();
+  var data = table.rows().data();
+  var chartData = processDataForChart(data);
+  generateChart(chartData);
+  ```
+
+### 15. BUSCA EM COLUNAS ESPECÍFICAS (COLUMN FILTERING):
+- **Descrição**: Permite aplicar filtros em colunas específicas, criando menus de filtro.
+- **Exemplo**:
   ```javascript
   $("#tabela").DataTable({
     initComplete: function () {
@@ -145,40 +207,44 @@ O **DataTables** oferece uma ampla gama de recursos que permitem criar tabelas i
   });
   ```
 
-16. **Botões de Imagem (Image Buttons)**
-- **Descrição:** Personalize botões com imagens, como exportar para PDF ou Excel com ícones personalizados.
-- **Exemplo:** 
+### 16. BOTÕES DE IMAGEM (IMAGE BUTTONS):
+- **Descrição**: Personalize botões com imagens, como exportar para PDF ou Excel com ícones personalizados.
+- **Exemplo**:
   ```javascript
-  buttons: [
-    {
-      extend: 'pdfHtml5',
-      text: '<img src="icon.png" /> PDF'
-    }
-  ]
+  $("#tabela").DataTable({
+    buttons: [
+      {
+        extend: 'pdfHtml5',
+        text: '<img src="icon.png" /> PDF'
+      }
+    ]
+  });
   ```
 
-17. **Customização de Cabeçalhos**
-- **Descrição:** Permite customizar os cabeçalhos das colunas com HTML ou adicionar ferramentas como filtros e menus de seleção.
-- **Exemplo:** 
+### 17. CUSTOMIZAÇÃO DE CABEÇALHOS:
+- **Descrição**: Permite customizar os cabeçalhos das colunas com HTML ou adicionar ferramentas como filtros e menus de seleção.
+- **Exemplo**:
   ```javascript
-  columns: [
-    { title: "<b>ID</b>" },
-    { title: "<i>Nome</i>" }
-  ]
+  $("#tabela").DataTable({
+    columns: [
+      { title: "<b>ID</b>" },
+      { title: "<i>Nome</i>" }
+    ]
+  });
   ```
 
-18. **Pesquisa em Tempo Real (Live Search)**
-- **Descrição:** A pesquisa começa automaticamente a medida que o usuário digita, sem precisar apertar "Enter".
-- **Exemplo:** 
+### 18. PESQUISA EM TEMPO REAL (LIVE SEARCH):
+- **Descrição**: A pesquisa começa automaticamente à medida que o usuário digita, sem precisar apertar "Enter".
+- **Exemplo**:
   ```javascript
   $("#tabela").DataTable({
     searchDelay: 500 // Configura o tempo de delay para a pesquisa em tempo real
   });
   ```
 
-19. **Comportamento de "Fixação" de Cabeçalho**
-- **Descrição:** Permite que o cabeçalho da tabela permaneça fixo enquanto o usuário rola os dados da tabela.
-- **Exemplo:** 
+### 19. COMPORTAMENTO DE "FIXAÇÃO" DE CABEÇALHO:
+- **Descrição**: Permite que o cabeçalho da tabela permaneça fixo enquanto o usuário rola os dados da tabela.
+- **Exemplo**:
   ```javascript
   $("#tabela").DataTable({
     scrollY: '50vh',
@@ -187,21 +253,45 @@ O **DataTables** oferece uma ampla gama de recursos que permitem criar tabelas i
   });
   ```
 
-20. **Mesclar Células (Cell Merging)**
-- **Descrição:** Permite a mesclagem de células dentro de uma tabela, útil para mostrar subtotais ou agrupar dados de forma visual.
-- **Exemplo:** Usando `rowspan` e `colspan` diretamente no HTML ou com plugins.
+### 20. MESCLAR CÉLULAS (CELL MERGING):
+- **Descrição**: Permite a mesclagem de células dentro de uma tabela, útil para mostrar subtotais ou agrupar dados de forma visual.
+- **Exemplo**:
+  ```html
+  <table id="tabela">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Idade</th>
+        <th>Cidade</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="2">João</td>
+        <td>25</td>
+        <td>São Paulo</td>
+      </tr>
+      <tr>
+        <td>26</td>
+        <td>São Paulo</td>
+      </tr>
+    </tbody>
+  </table>
+  ```
+
+Esses exemplos de código mostram como ativar e configurar recursos básicos do **DataTables** em uma tabela.
 
 ### CONCLUSÃO:
 Esses são apenas alguns dos muitos recursos oferecidos pelo **DataTables**. A biblioteca é altamente configurável, permitindo que você adicione ou remova recursos conforme necessário, criando tabelas ricas e interativas para o seu projeto.
 
----
+--- 
 
 ## COMO ATIVAR OU DESATIVAR RECURSOS NO DATATABLES?
 Os recursos no **DataTables** podem ser facilmente ativados ou desativados usando as opções de configuração passadas no momento da inicialização da tabela. Abaixo estão os passos para controlar cada funcionalidade:
 
-1. **Paginação**
-- **Ativar:** Está ativada por padrão.
-- **Desativar:** Use a opção `paging: false`.
+### 1.PAGINAÇÃO
+- ATIVAR: Está ativada por padrão.
+- DESATIVAR: Use a opção `paging: false`.
 
 ```javascript
 $("#tabela").DataTable({
@@ -209,9 +299,9 @@ $("#tabela").DataTable({
 });
 ```
 
-2. **Pesquisa**
-- **Ativar:** Está ativada por padrão.
-- **Desativar:** Use a opção `searching: false`.
+### 2.PESQUISA
+- ATIVAR: Está ativada por padrão.
+- DESATIVAR: Use a opção `searching: false`.
 
 ```javascript
 $("#tabela").DataTable({
@@ -219,9 +309,9 @@ $("#tabela").DataTable({
 });
 ```
 
-3. **Ordenação**
-- **Ativar:** Está ativada por padrão.
-- **Desativar:** Use a opção `ordering: false`.
+### 3.ORDENAÇÃO
+- ATIVAR: Está ativada por padrão.
+- DESATIVAR: Use a opção `ordering: false`.
 
 ```javascript
 $("#tabela").DataTable({
@@ -229,9 +319,9 @@ $("#tabela").DataTable({
 });
 ```
 
-4. **Botões de Exportação**
-- **Ativar:** Configure a opção `dom` e adicione os botões desejados em `buttons`.
-- **Desativar:** Remova ou não configure os botões.
+### 4.BOTÕES DE EXPORTAÇÃO
+- ATIVAR: Configure a opção `dom` e adicione os botões desejados em `buttons`.
+- DESATIVAR: Remova ou não configure os botões.
 
 **Para desativar:**
 ```javascript
@@ -240,9 +330,9 @@ $("#tabela").DataTable({
 });
 ```
 
-5. **Idioma**
-- **Ativar Tradução:** Use a opção `language.url` e insira o link do arquivo JSON.
-- **Desativar Tradução:** Não inclua a opção `language`.
+### 5.IDIOMA
+- ATIVAR TRADUÇÃO: Use a opção `language.url` e insira o link do arquivo JSON.
+- DESATIVAR TRADUÇÃO: Não inclua a opção `language`.
 
 **Para desativar a tradução:**
 ```javascript
@@ -251,9 +341,9 @@ $("#tabela").DataTable({
 });
 ```
 
-6. **Ordenação Inicial**
-- **Ativar Ordenação Específica:** Use `order: [[coluna, "asc" | "desc"]]`.
-- **Desativar Ordenação Inicial:** Use `order: []`.
+### 6.ORDENAÇÃO INICIAL
+- ATIVAR ORDENÇÃO ESPECÍFICA: Use `order: [[coluna, "asc" | "desc"]]`.
+- DESATIVAR ORDENÇÃO INICIAL: Use `order: []`.
 
 **Para desativar:**
 ```javascript
@@ -262,14 +352,14 @@ $("#tabela").DataTable({
 });
 ```
 
-7. **Número de Registros por Página**
-- **Configurar:** Use a opção `pageLength` para o número padrão e `lengthMenu` para definir as opções.
-- **Desativar Controle do Usuário:** Não exiba o menu de seleção com `lengthChange: false`.
+### 7.NÚMERO DE REGISTROS POR PÁGINA
+- CONFIGURAR: Use a opção `
 
-**Para desativar o menu de controle:**
+pageLength`.
+
 ```javascript
 $("#tabela").DataTable({
-    lengthChange: false // Usuário não pode mudar o número de registros por página
+    pageLength: 15 // Exibe 15 registros por página
 });
 ```
 
@@ -292,5 +382,6 @@ $(document).ready(function () {
 });
 ```
 
+### CONCLUSÃO:
 Com essas configurações, é possível personalizar a tabela para atender às suas necessidades específicas, ativando ou desativando funcionalidades conforme necessário.
 
